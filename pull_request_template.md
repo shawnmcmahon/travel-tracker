@@ -1,7 +1,7 @@
 Fix or Feature?
 
 
-What does it changes?
+What does it change?
 
 
 Files changed?

@@ -404,3 +404,5 @@ let sampleDestinationData =
 
 
 }
+
+export default sampleDestinationData;

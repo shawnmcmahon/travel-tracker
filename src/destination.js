@@ -1,16 +1,15 @@
-// import User from './user';
-// import Trip from './trip';
-//
-// class Destination() {
-//   constructor(property) {
-//     this.destinationID = property.destinationID;
-//     this.destinationLocation = property.destinationLocation;
-//     this.destinationFlightCost = property.destinationFlightCost;
-//     this.destinationImage = property.destinationImage;
-//     this.destinationAlt = property.destinationAlt
-//   }
-// }
-//
-//
-//
-// export default Destination
+
+class Destination {
+  constructor(property) {
+    this.id = property.id;
+    this.destination = property.destination;
+    this.estimatedLodgingCostPerDay = property.estimatedLodgingCostPerDay;
+    this.estimatedFlightCostPerPerson = property.estimatedFlightCostPerPerson
+    this.image = property.image;
+    this.alt = property.alt;
+  }
+}
+
+
+
+export default Destination

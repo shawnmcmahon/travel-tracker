@@ -1,4 +1,4 @@
-let sampleUserData =
+let sampleTravelerData =
 {
   "travelers": [
     {
@@ -254,4 +254,4 @@ let sampleUserData =
     ]
 }
 
-export default sampleTripData;
+export default sampleTravelerData;

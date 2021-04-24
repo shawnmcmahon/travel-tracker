@@ -1,16 +1,21 @@
 import { expect } from 'chai';
 
 import Traveler from '../src/traveler.js'
-import sampleTravelerData from '../src/data/sampleTravelerData.js'
+// import Trip from './trip';
+import travelerData from '../src/data/sampleTravelerData.js';
+import tripData from '../src/data/sampleTripData.js';
+import destinationData from '../src/data/sampleDestinationData.js';
 
-let sampleTraveler;
+
+// let sampleTraveler;
 
 describe('Traveler', () => {
   let traveler1, traveler2, traveler3;
 
   beforeEach(() => {
 
-    traveler1 =  new Traveler(sampleTravelerData.travelers[0])
+    traveler1 =  new Traveler(travelerData.travelers[0])
+    traveler2 =  new Traveler(travelerData.travelers[43])
   });
 
   it('Should be a function', () => {
@@ -22,14 +27,33 @@ describe('Traveler', () => {
   })
 
   it('Should have a traveler name', () => {
-    console.log(traveler1);
     expect(traveler1.name).to.eql('Ham Leadbeater')
   })
 
   it('Should have a traveler type', () => {
-    console.log(traveler1);
     expect(traveler1.travelerType).to.eql('relaxer')
   })
+
+  it('Should have a method that retrieves the traveler\'s trip history', () => {
+  //  console.log(traveler2.populateTripHistory(tripData['trips']);
+    expect(traveler2.populateTripHistory(tripData)).to.eql([{
+    "id": 1,
+    "userID": 44,
+    "destinationID": 49,
+    "travelers": 1,
+    "date": "2019/09/16",
+    "duration": 8,
+    "status": "approved",
+    "suggestedActivities": []
+  }])
+  })
+
+
+
+
+
+
+
 
 
 })

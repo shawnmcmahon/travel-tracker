@@ -1,21 +1,23 @@
 import { expect } from 'chai';
 
 import TripRepo from '../src/tripRepo.js';
-import sampleTripData from '../src/data/sampleTripData.js';
+import tripData from '../src/data/sampleTripData.js';
 
 
-let sampleTripRepo;
+
 
 
 describe('Trip Repo', () => {
+  let sampleTripRepo;
+
   beforeEach(() => {
 
-    sampleTripRepo = new TripRepo(sampleTripData);
+    sampleTripRepo = new TripRepo(tripData);
 
   });
 
   it('Should be a function', () => {
-    console.log(sampleTripRepo);
+    //console.log(sampleTripRepo);
     expect(TripRepo).to.be.a('function');
   })
 
@@ -126,6 +128,7 @@ describe('Trip Repo', () => {
         ]
     })
   })
+
 
 
 

@@ -1,13 +1,20 @@
-import User from './trip';
+import User from './user';
+import Destination from './destination';
+import sampleTripData from './data/sampleTripData';
+
 
 class Trip {
   constructor(property) {
     this.tripID = property.tripID;
-    this.tripDestination = property.tripDestination;
-    this.tripFlightCost = property.tripFlightCost;
-    this.tripLodgeCost = property.tripLodgeCost;
+    this.tripUserID = property.tripUserID;
+    this.tripDestinationID = property.tripDestinationID;
+    this.tripTravelers = property.tripTravelers;
+    this.tripDuration = property.tripDuration;
+    this.tripStatus = property.tripStatus;
+    this.tripSuggestedActivities = property.tripSuggestedActivities;
     this.tripAgentFee = property.tripAgentFee;
     this.tripTotalCost = property.tripTotalCost;
+
 
   }
 

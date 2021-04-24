@@ -11,6 +11,8 @@ class User {
 
   }
 
+
+
   populateUser() {
     // Go into user API, user a find method to find the id or the userName,
     // save user trip history to a variable, send that variable to

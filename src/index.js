@@ -5,9 +5,11 @@
 import domUpdates from './domUpdates';
 import scripts from './scripts';
 import User from './user';
+import Trip from './trip';
+import TripRepo from './tripRepo';
+import Destination from './destination'
 import './css/base.scss';
 
-// import Trip from './trip';
 
 
 // An example of how you tell webpack to use an image (also need to link to it in the index.html)

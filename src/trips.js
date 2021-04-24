@@ -1,4 +1,3 @@
-import User from './user';
 import Destination from './destination';
 import sampleTripData from './data/sampleTripData';
 

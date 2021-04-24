@@ -1,11 +1,12 @@
-import User from './user';
-import Trip from './trip';
 
-import sampleTripData from './data/sampleTripData.js';
+import Trip from './trips';
+
+
 
 class TripRepo {
-  constructor(sampleTripData) {
-    this.tripData = sampleTripData;
+  constructor(tripData) {
+    this.tripData = tripData;
+    //console.log(tripData);
   }
 }
 
@@ -15,10 +16,9 @@ class TripRepo {
 
 
 
-
-
-
 //find User's trips
+
+//Destionations visited
 
 //find userExpensesYTD(userID, destination)
 

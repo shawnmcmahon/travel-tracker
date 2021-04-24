@@ -4,6 +4,7 @@ import Traveler from '../src/traveler.js'
 // import Trip from './trip';
 import travelerData from '../src/data/sampleTravelerData.js';
 import tripData from '../src/data/sampleTripData.js';
+import destinationData from '../src/data/sampleDestinationData.js';
 
 
 // let sampleTraveler;
@@ -47,7 +48,10 @@ describe('Traveler', () => {
   }])
   })
 
-  
+
+
+
+
 
 
 

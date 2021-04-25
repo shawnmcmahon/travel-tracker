@@ -44,7 +44,7 @@ class Traveler {
     console.log("im here")
     //look through the this.travelerTripHistory array, if the trip.destination ID
     //matches an destination id, store that destination
-      //const destinationsTraveled =
+    //const destinationsTraveled =
 
 
 

@@ -2,9 +2,9 @@
 // Do not delete or rename this file ********
 
 // An example of how you tell webpack to use a CSS (SCSS) file
-import domUpdates from './domUpdates';
-import scripts from './scripts';
-import User from './user';
+// import domUpdates from './domUpdates';
+// import scripts from './scripts';
+import Traveler from './traveler';
 import Trip from './trip';
 import TripRepo from './tripRepo';
 import Destination from './destination'

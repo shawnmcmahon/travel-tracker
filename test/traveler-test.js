@@ -48,7 +48,7 @@ describe('Traveler', () => {
   }])
   })
 
-  it.only('Should have a method that calculate expenses', () => {
+  it.skip('Should have a method that calculate expenses', () => {
     //console.log(destinationData);
     expect(traveler2.calculateExpenses(tripData, destinationData)).to.equal(89);
   })

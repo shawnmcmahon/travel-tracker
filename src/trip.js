@@ -1,6 +1,8 @@
-import Destination from './destination';
+import Destination from '../src/destination.js';
 import TripRepo from '../src/tripRepo.js';
 import tripData from './data/sampleTripData';
+//import destinationData from '../data/sampleDestinationData.js';
+
 
 
 class Trip {

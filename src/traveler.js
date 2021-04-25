@@ -21,30 +21,24 @@ class Traveler {
     const travelerTripHistory = tripData['trips'].filter(trip => trip.userID === this.id)
     //console.log(travelerTripHistory)
     this.travelerTripHistory = travelerTripHistory;
-    console.log(this.travelerTripHistory);
+    //console.log(this.travelerTripHistory);
     return(travelerTripHistory)
 
   }
 
-
   calculateExpenses(tripData, destinationData) {
-    //times the destination lo
-    // let currentDate = "2021/02/28";
-    // let oneYearAgo = "2020/02/28";
-    //
-    //console.log(destinationData);
-    //console.log(tripData)
 
-    const travelerTripHistory = tripData['trips'].filter(trip => trip.userID === this.id);
-    const mapDestinationIDs = travelerTripHistory.map(trip => trip.destinationID);
+    //console.log(this.populateHistory)
+    const tripHistory = this.populateTripHistory(tripData, this.id);
+    const mapDestinationIDs = tripHistory.map(trip => trip.destinationID);
     const findDestinations = destinationData['destinations'].filter(destination => destination.id === mapDestinationIDs);
     //console.log(findDestinations);
-    console.log(mapDestinationIDs)
+    //console.log(mapDestinationIDs)
     //console.log(travelerTripHistory)
     console.log("im here")
     //look through the this.travelerTripHistory array, if the trip.destination ID
     //matches an destination id, store that destination
-      //const destinationsTraveled =
+    //const destinationsTraveled =
 
 
 

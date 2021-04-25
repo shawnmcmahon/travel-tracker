@@ -1,7 +1,110 @@
 /* This is an example of using Sass, otherwise plain CSS works too*/
 $primary-background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
-;
 
-body {
-  background: $primary-background;
-}
+
+
+  html,
+  main{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+
+
+  }
+
+  body {
+    background: $primary-background;
+  }
+
+  nav {
+    background-color: purple;
+    height: 75px;
+    width: 100vw;
+  }
+
+  .countdown-background {
+    background-color: red;
+    height: 150px;
+    width: 600px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+  }
+
+  .expenses-background {
+    background-color: grey;
+    height: 100px;
+    width: 600px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+  }
+
+  .trips-background {
+    background-color: blue;
+    height: 500px;
+    width: 600px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+  }
+
+  .book-trip-background {
+    background: white;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .search-results-background {
+    background: purple;
+    width: 600px;
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+
+  }
+
+  .destination-card {
+    background: pink;
+    width: 500px;
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    align-self: center;
+    margin-bottom: 30px;
+  }
+
+
+  .nav {
+    justify-content: flex-end;
+  }
+
+  .countdown,
+  .traveler-expenses {
+     justify-content: center;
+    align-self: center;
+  }
+
+  .label {
+    justify-content: center;
+    // align-self: center;
+    padding: 10px;
+  }
+
+  .trip-card {
+    background-color: white;
+    height: auto;
+    width: 550px;
+    align-self: center;
+    color: black;
+    margin-bottom: 30px;
+  }

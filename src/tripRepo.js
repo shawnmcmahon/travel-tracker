@@ -12,6 +12,8 @@ class TripRepo {
 
 
 
+//instiate trips data on this tripRepo
+
 
 
 

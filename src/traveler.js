@@ -17,27 +17,37 @@ class Traveler {
 
   populateTripHistory(tripData, id) {
     //console.log(tripData);
-    console.log("im here")
+    //console.log("im here")
     const travelerTripHistory = tripData['trips'].filter(trip => trip.userID === this.id)
-    console.log(travelerTripHistory)
-    //this.travelerTripHistory = travelerTripHistory;
-    //console.log(this.travelerTripHistory);
+    //console.log(travelerTripHistory)
+    this.travelerTripHistory = travelerTripHistory;
+    console.log(this.travelerTripHistory);
     return(travelerTripHistory)
 
   }
 
 
-  calculateTravelerExpensesYTD(destinationData) {
+  calculateExpenses(tripData, destinationData) {
+    //times the destination lo
+    // let currentDate = "2021/02/28";
+    // let oneYearAgo = "2020/02/28";
     //
+    //console.log(destinationData);
+    //console.log(tripData)
+
+    const travelerTripHistory = tripData['trips'].filter(trip => trip.userID === this.id);
+    const mapDestinationIDs = travelerTripHistory.map(trip => trip.destinationID);
+    const findDestinations = destinationData['destinations'].filter(destination => destination.id === mapDestinationIDs);
+    //console.log(findDestinations);
+    console.log(mapDestinationIDs)
+    //console.log(travelerTripHistory)
+    console.log("im here")
+    //look through the this.travelerTripHistory array, if the trip.destination ID
+    //matches an destination id, store that destination
+      //const destinationsTraveled =
 
 
 
-
-
-    // filter through this.TripHistory, find the total cost,
-    // and push to a new array. In that new array,
-    // sum up all the total cost for each trip,
-    // send this integer to this.ExpensesYTD.
   }
 
 

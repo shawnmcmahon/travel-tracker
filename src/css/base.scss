@@ -48,22 +48,63 @@ $primary-background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,1
 
   .trips-background {
     background-color: blue;
-    height: 40vh;
+    height: 500px;
     width: 600px;
     margin: 20px;
     display: flex;
+    flex-direction: column;
+    color: white;
   }
+
+  .book-trip-background {
+    background: white;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .search-results-background {
+    background: purple;
+    width: 600px;
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+
+  }
+
+  .destination-card {
+    background: pink;
+    width: 500px;
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    align-self: center;
+    margin-bottom: 30px;
+  }
+
 
   .nav {
     justify-content: flex-end;
   }
 
-  .countdown {
-    justify-content: center;
+  .countdown,
+  .traveler-expenses {
+     justify-content: center;
     align-self: center;
   }
 
-  .traveler-expenses {
+  .label {
     justify-content: center;
+    // align-self: center;
+    padding: 10px;
+  }
+
+  .trip-card {
+    background-color: white;
+    height: auto;
+    width: 550px;
     align-self: center;
+    color: black;
+    margin-bottom: 30px;
   }

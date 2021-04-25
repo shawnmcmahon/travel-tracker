@@ -3,4 +3,4 @@
 //
 //
 //
-// export default
+// export default Trips

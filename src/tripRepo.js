@@ -1,5 +1,5 @@
 
-import Trip from './trips';
+import Trip from './trip';
 
 
 

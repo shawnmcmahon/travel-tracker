@@ -9,7 +9,6 @@ describe('Destination', () => {
 
 
   beforeEach(() => {
-    console.log("im here")
     lima = new Destination(data.destinations[0])
   })
 
@@ -37,7 +36,7 @@ describe('Destination', () => {
     expect(lima.estimatedFlightCostPerPerson).to.be.eql(400);
   })
 
-  it.only('Should have image alt statement for the screen reader' , () => {
+  it('Should have image alt statement for the screen reader' , () => {
     // console.log(lima)
     expect(lima.alt).to.be.eql('overview of city buildings with a clear sky')
   })

@@ -1,7 +1,7 @@
 import destinationData from '../src/data/sampleDestinationData';
 
 
-class DestinationRepo {
+class Destination {
   constructor(property) {
     this.id = property.id;
     this.destination = property.destination;
@@ -18,8 +18,9 @@ class DestinationRepo {
     // return arrayOfDestinationClasses;
     // }
 
-
   }
+
+  //search destinations here
 
 
 }
@@ -31,4 +32,4 @@ class DestinationRepo {
 
 
 
-export default DestinationRepo
+export default Destination

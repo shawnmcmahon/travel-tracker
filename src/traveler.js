@@ -1,5 +1,5 @@
 // import Trip from './trip';
-// import TripRepo from './tripRepo'
+import TripRepo from './tripRepo.js'
 //
 // let tripHistory = new TripRepo();
 
@@ -11,6 +11,7 @@ class Traveler {
     this.travelerTripHistory = [];
     this.travelerExpensesYTD = 0;
     this.loginAccepted = false;
+    this.searchedTrips = [];
     // this.allTripHistory = new TripRepo(property.allTripHistory);
 
   }
@@ -26,35 +27,38 @@ class Traveler {
 
   }
 
-  calculateExpenses(tripData, destinationData) {
+  // calculateExpenses(tripData, destinationData) {
+  //
+  //   // //console.log(this.populateHistory)
+  //   // const tripHistory = this.populateTripHistory(tripData, this.id);
+  //   // const mapDestinationIDs = tripHistory.map(trip => trip.destinationID);
+  //   // const findDestinations = destinationData['destinations'].filter(destination => destination.id === mapDestinationIDs);
+  //   // //console.log(findDestinations);
+  //   // //console.log(mapDestinationIDs)
+  //   // //console.log(travelerTripHistory)
+  //   // console.log("im here")
+  //   // //look through the this.travelerTripHistory array, if the trip.destination ID
+  //   // //matches an destination id, store that destination
+  //   // //const destinationsTraveled =
+  //
+  // }
 
-    //console.log(this.populateHistory)
-    const tripHistory = this.populateTripHistory(tripData, this.id);
-    const mapDestinationIDs = tripHistory.map(trip => trip.destinationID);
-    const findDestinations = destinationData['destinations'].filter(destination => destination.id === mapDestinationIDs);
-    //console.log(findDestinations);
-    //console.log(mapDestinationIDs)
-    //console.log(travelerTripHistory)
-    console.log("im here")
-    //look through the this.travelerTripHistory array, if the trip.destination ID
-    //matches an destination id, store that destination
-    //const destinationsTraveled =
 
+  searchTrips(date, duration, partySize, tripDestination, destinationData) {
+    const availableDestinations = destinationData['destinations'].filter(destination => destination.id === tripDestination)
+    console.log(availableDestinations);
+    //this list is only destinations available, not trips. Need to understand how to
+    //convert possible destiantions into trips
+    // const calculateCost = availableDestinations.map(destination =>
 
-
+    this.searchedTrips = availableDestinations
+    return availableDestinations;
   }
 
 
-  searchTrips(checkInData, checkOutDate, partySize, tripDestination) {
-    // Look at the available destinations API,
-    // filter the available trips by the parameters given, return that array
-
-  }
-
-
-  bookTrip(checkInData, checkOutDate, partySize, tripDestination) {
+  bookTrip(date, duration, partySize, tripDestination, destinationData) {
     //Take the selected trip and push to the this.travelerTripHistory array
-
+    this.searchTrips.find()
   }
 
 
@@ -69,12 +73,7 @@ class Traveler {
     // If it returns true, take the traveler to the home page
   }
 
-  // populatetraveler() {
-  //   // Go into traveler API, traveler a find method to find the id or the travelerName,
-  //   // save traveler trip history to a variable, send that variable to
-  //   // this.travelerTripHistory.
-  //
-  // }
+
 
 }
 

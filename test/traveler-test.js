@@ -48,10 +48,21 @@ describe('Traveler', () => {
   }])
   })
 
-  it.skip('Should have a method that calculate expenses', () => {
-    //console.log(destinationData);
-    expect(traveler2.calculateExpenses(tripData, destinationData)).to.equal(89);
-  })
+  it('Should have a method that searches trips', () => {
+    let availableTripTest = traveler1.searchTrips('09/20/2020', 8, 4, 43, destinationData);
+    expect(availableTripTest).to.eql([
+  {
+    id: 43,
+    destination: 'Nassau, The Bahamas',
+    estimatedLodgingCostPerDay: 550,
+    estimatedFlightCostPerPerson: 90,
+    image: 'https://images.unsplash.com/photo-1548574505-5e239809ee19?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1664&q=80',
+    alt: 'aerial photography of white and blue cruise ships during daytime'
+  }
+  ]);
+    })
+
+
 
 
 

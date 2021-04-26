@@ -25,6 +25,8 @@ class Trip {
     // Set this.tripAgentFee equal to 10% of netCost.
     // Add netCost to this.tripAgentFee set equal this.tripTotalCost
   }
+
+  
 }
 
 

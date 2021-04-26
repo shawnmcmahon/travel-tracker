@@ -36,10 +36,38 @@ describe('Trip Repo', () => {
     expect(user3Trips).to.eql([{id: 3, userID: 3, destinationID: 22, travelers: 4, date: '2020/05/22', duration: 17, status: 'pending', suggestedActivities: []}])
   })
 
-  it.only('Should have a method that calculatesa user\'s trips', () => {
-    const user3cost = sampleTripRepo.calculateTripCost()
-    
+  it('Should have a function that finds destinations the traveler visit', () => {
+    const user3destinations = sampleTripRepo.destinationsVisitedByUser(3, destinationData)
+    expect(user3destinations).to.eql([{
+    "id": 22,
+    "destination": "Rome, Italy",
+    "estimatedLodgingCostPerDay": 90,
+    "estimatedFlightCostPerPerson": 650,
+    "image": "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
+    "alt": "people standing inside a colosseum during the day"
+  }]);
+
   })
+
+  it('Should have a method that calculates a users trip expeneses', () => {
+
+    const user3expenses = sampleTripRepo.calculateTripCost(3, destinationData);
+    expect(user3expenses).to.eql(9592)
+  })
+
+
+  it.only('Should have a method that calculates the cost of one trip', () => {
+    const costForRomeTrip = sampleTripRepo.calculateCostForOneTrip(4, 17, 22, destinationData)
+    console.log(costForRomeTrip);
+    expect(costForRomeTrip).to.eql(9592)
+  })
+
+  // it.only('Should have a method that calculatesa user\'s trips', () => {
+  //   const user3cost = sampleTripRepo.calculateTripCost()
+  //
+  // })
+
+
 
   // it('Should have a property that contains all trip data', () => {
   //   expect(sampleTripRepo.tripData).to.eql({

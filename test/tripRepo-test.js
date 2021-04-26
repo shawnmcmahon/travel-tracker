@@ -50,6 +50,7 @@ describe('Trip Repo', () => {
   })
 
   it('Should have a method that calculates a users trip expeneses', () => {
+
     const user3expenses = sampleTripRepo.calculateTripCost(3, destinationData);
     expect(user3expenses).to.eql(9592)
   })

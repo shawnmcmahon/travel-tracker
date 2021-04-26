@@ -35,8 +35,10 @@ class TripRepo {
   //
 
   calculateTripCost(travelerID, destinationData) {
-    //console.log(this.destinationsVisitedByUser)
-  
+    // console.log(this.findUsersTrips(travelerID));
+    // const tripsThisYear = this.findUsersTrips(travelerID)
+
+
     const totalCost = this.findUsersTrips(travelerID).reduce((sum, trip) => {
       const destinationVisited = this.destinationsVisitedByUser(trip.userID, destinationData);
     //  console.log(destinationVisited);
@@ -45,7 +47,6 @@ class TripRepo {
           //console.log(trip.travelers);
           //console.log("flight cost",  destination.estimatedFlightCostPerPerson)
           //console.log("duration", trip.duration)
-
           sum += trip.travelers * destination.estimatedFlightCostPerPerson;
           sum += (trip.duration * destination.estimatedLodgingCostPerDay) * trip.travelers;
 
@@ -65,12 +66,9 @@ class TripRepo {
 
 }
 
-//Destionations visited
 
 
 
-
-//find userExpensesYTD(userID, destination)
 
 
 

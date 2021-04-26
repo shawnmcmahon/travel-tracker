@@ -51,8 +51,8 @@ class Traveler {
     //convert possible destiantions into trips
     // const calculateCost = availableDestinations.map(destination =>
 
-    this.searchedTrips = availableTrips;
-    return availableTrips;
+    this.searchedTrips = availableDestinations
+    return availableDestinations;
   }
 
 

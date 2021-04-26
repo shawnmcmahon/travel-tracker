@@ -55,6 +55,12 @@ describe('Trip Repo', () => {
     expect(user3expenses).to.eql(9592)
   })
 
+
+  it.only('Should have a method that calculates the cost of one trip', () => {
+    const costForRomeTrip = sampleTripRepo.calculateTripCostForOneTrip(3, 22, destinationData)
+    expect(costForRomeTrip).to.eql(9592)
+  })
+
   // it.only('Should have a method that calculatesa user\'s trips', () => {
   //   const user3cost = sampleTripRepo.calculateTripCost()
   //

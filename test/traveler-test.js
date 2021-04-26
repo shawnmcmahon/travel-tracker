@@ -48,7 +48,7 @@ describe('Traveler', () => {
   }])
   })
 
-  it.only('Should have a method that searches trips', () => {
+  it('Should have a method that searches trips', () => {
     let availableTripTest = traveler1.searchTrips('09/20/2020', 8, 4, 43, destinationData);
     expect(availableTripTest).to.eql([
   {

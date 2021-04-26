@@ -34,11 +34,10 @@ class TripRepo {
   // }
   //
 
+  //calculates for all of user's trips, not just one
   calculateTripCost(travelerID, destinationData) {
     // console.log(this.findUsersTrips(travelerID));
     // const tripsThisYear = this.findUsersTrips(travelerID)
-
-
     const totalCost = this.findUsersTrips(travelerID).reduce((sum, trip) => {
       const destinationVisited = this.destinationsVisitedByUser(trip.userID, destinationData);
     //  console.log(destinationVisited);
@@ -59,6 +58,25 @@ class TripRepo {
 
     return totalCost * 1.1
 
+  }
+
+  calculateTripCostForOneTrip(travelerID, tripID, destinationData) {
+    const tripToBeCalculated = this.findUsersTrips(travelerID).find(trip => trip.destinationID === tripID)
+    const destinationVisited = destinationData['destinations'].filter(destination => destination.id === tripToBeCalculated.destinationID)
+    const lodgeCost = (tripToBeCalculated.duration * destinationVisited[0].estimatedLodgingCostPerDay) * tripToBeCalculated.travelers;
+    const flightCost = tripToBeCalculated.travelers * destinationVisited[0].estimatedFlightCostPerPerson
+    const agentFee = (lodgeCost + flightCost) * .1
+    const totalCost = lodgeCost + flightCost + agentFee
+    //console.log(flightCost)
+    //console.log(lodgeCost);
+    //console.log(tripToBeCalculated.duration);
+    //console.log(destinationVisited);
+    //console.log(destinationVisited[0].estimatedLodgingCostPerDay);
+    //console.log(tripToBeCalculated);
+    //console.log(findDestinationVisited);
+    //console.log(this.tripData)
+    //console.log(this.findUsersTrips(3));
+    return totalCost
   }
 
 

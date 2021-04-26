@@ -1,5 +1,5 @@
 /* This is an example of using Sass, otherwise plain CSS works too*/
-$primary-background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+$primary-background: #00239C;
 
 
 
@@ -10,6 +10,7 @@ $primary-background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,1
     width: 100vw;
     flex-direction: column;
     align-items: center;
+    color: white;
 
 
   }
@@ -22,6 +23,15 @@ $primary-background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,1
     background-color: purple;
     height: 75px;
     width: 100vw;
+
+  }
+
+  input {
+    width: 100px;
+  }
+
+  button {
+    background-color: #CED9FF;
   }
 
   .countdown-background {
@@ -36,18 +46,20 @@ $primary-background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,1
   }
 
   .expenses-background {
-    background-color: grey;
+    background-color: #CED9FF;
     height: 100px;
-    width: 600px;
-    margin: 20px;
+    width: 550px;
+    margin: 10px;
     display: flex;
     justify-content: center;
     flex-direction: column;
+    border-radius: 5px;
+    color: black;
 
   }
 
   .trips-background {
-    background-color: blue;
+    background-color: inherit;
     height: 500px;
     width: 600px;
     margin: 20px;
@@ -57,15 +69,17 @@ $primary-background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,1
   }
 
   .book-trip-background {
-    background: white;
-    width: 600px;
+    background: inherit;
+    width: 550px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .search-results-background {
-    background: purple;
-    width: 600px;
+    background: inherit;
+    width: 550px;
     display: flex;
     height: auto;
     flex-direction: column;
@@ -100,11 +114,24 @@ $primary-background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,1
     padding: 10px;
   }
 
-  .trip-card {
-    background-color: white;
+  .card {
+    background-color: #1134AD;
     height: auto;
     width: 550px;
     align-self: center;
     color: black;
     margin-bottom: 30px;
+    border-radius: 5px;
+    color: white;
+  }
+
+  .card-title {
+    margin-left: 10px;
+    font-size: 22px;
+  }
+
+  .card-text {
+    margin: 5px;
+    justify-content: center;
+    margin-left: 35px;
   }

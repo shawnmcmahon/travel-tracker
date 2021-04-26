@@ -60,11 +60,14 @@ class TripRepo {
 
   }
 
-  calculateTripCostForOneTrip(travelerID, tripID, destinationData) {
-    const tripToBeCalculated = this.findUsersTrips(travelerID).find(trip => trip.destinationID === tripID)
-    const destinationVisited = destinationData['destinations'].filter(destination => destination.id === tripToBeCalculated.destinationID)
-    const lodgeCost = (tripToBeCalculated.duration * destinationVisited[0].estimatedLodgingCostPerDay) * tripToBeCalculated.travelers;
-    const flightCost = tripToBeCalculated.travelers * destinationVisited[0].estimatedFlightCostPerPerson
+  calculateCostForOneTrip(travelers, duration, destinationID, destinationData) {
+    //const tripToBeCalculated = this.findUsersTrips(travelerID).find(trip => trip.destinationID === tripID)
+    // console.log(this.findUsersTrips['trips']);
+    // console.log("im here")
+
+    const destinationVisited = destinationData['destinations'].filter(destination => destination.id === destinationID)
+    const lodgeCost = (duration * destinationVisited[0].estimatedLodgingCostPerDay) * travelers;
+    const flightCost = travelers * destinationVisited[0].estimatedFlightCostPerPerson
     const agentFee = (lodgeCost + flightCost) * .1
     const totalCost = lodgeCost + flightCost + agentFee
     //console.log(flightCost)

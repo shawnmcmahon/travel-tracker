@@ -57,7 +57,8 @@ describe('Trip Repo', () => {
 
 
   it.only('Should have a method that calculates the cost of one trip', () => {
-    const costForRomeTrip = sampleTripRepo.calculateTripCostForOneTrip(3, 22, destinationData)
+    const costForRomeTrip = sampleTripRepo.calculateCostForOneTrip(4, 17, 22, destinationData)
+    console.log(costForRomeTrip);
     expect(costForRomeTrip).to.eql(9592)
   })
 

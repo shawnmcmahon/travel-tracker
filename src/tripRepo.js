@@ -28,13 +28,15 @@ class TripRepo {
   }
   //trips - reduce, destinations for each, if condition inside the forEach that only has a condition that matches the destinationIDs
 
-  // destinationsVisited(travelerID, destinations) { // write a test for this!
+  // destinationsVisited(travelerID, destinations) {
   //   const allTrips = this.travelerTrips(travelerID);
   //   return destinations.filter(destination => allTrips.find(trip => trip.destinationID === destination.id))
   // }
   //
+
   calculateTripCost(travelerID, destinationData) {
     //console.log(this.destinationsVisitedByUser)
+  
     const totalCost = this.findUsersTrips(travelerID).reduce((sum, trip) => {
       const destinationVisited = this.destinationsVisitedByUser(trip.userID, destinationData);
     //  console.log(destinationVisited);
@@ -57,6 +59,8 @@ class TripRepo {
     return totalCost * 1.1
 
   }
+
+
 
 
 }

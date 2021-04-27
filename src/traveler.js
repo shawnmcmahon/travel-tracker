@@ -22,7 +22,6 @@ class Traveler {
 
 
   searchTrips(date, duration, partySize, tripDestination, destinationData) {
-    const availableDestinations = destinationData['destinations'].filter(destination => destination.id === tripDestination)
     this.searchedTrips = availableDestinations
     return availableDestinations;
 

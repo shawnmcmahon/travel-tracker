@@ -7,6 +7,11 @@ let domUpdates = {
   //   let minDate = today.toISOString().substring(0, 10);
   //   departDate.setAttribute("min", minDate);
   // }
+
+
+  //populateDestinationDropDownMenu
+
+
 }
 
 export default domUpdates

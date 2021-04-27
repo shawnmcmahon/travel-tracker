@@ -11,10 +11,6 @@ import './css/base.scss';
 
 
 
-//Fetch requests for trip data
-const fetchUserData = () => fetch('http://localhost:3001/api/v1/travelers')
-  .then(response => checkForError(response))
-  .catch(err => console.log(`User API Error: ${err.message}`));
 
 //Post request to search, book, and cancel trips
 

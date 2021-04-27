@@ -35,7 +35,6 @@ describe('Traveler', () => {
   })
 
   it('Should have a method that retrieves the traveler\'s trip history', () => {
-  //  console.log(traveler2.populateTripHistory(tripData['trips']);
     expect(traveler2.populateTripHistory(tripData)).to.eql([{
     "id": 1,
     "userID": 44,
@@ -48,7 +47,7 @@ describe('Traveler', () => {
   }])
   })
 
-  it('Should have a method that searches trips', () => {
+  it('Should have a method that searches destinations', () => {
     let availableTripTest = traveler1.searchTrips('09/20/2020', 8, 4, 43, destinationData);
     expect(availableTripTest).to.eql([
   {
@@ -61,6 +60,15 @@ describe('Traveler', () => {
   }
   ]);
     })
+
+    // it.only('Should have a method that books a trip' ,() => {
+    //   //console.log(traveler2)
+    //
+    //   let tripToRussia = traveler2.bookTrip(2, 4, 13, destinationData, tripData);
+    //
+    //
+    //
+    // })
 
 
 

@@ -3,7 +3,7 @@ import { expect } from 'chai';
 import Trip from '../src/Trip.js'
 import TripRepo from '../src/TripRepo.js';
 import sampleTripData from '../src/data/sampleTripData.js';
-
+import destinationData from '../src/data/sampleDestinationData.js'
 
 describe('Trip', () => {
   let sampleTrip;
@@ -37,6 +37,11 @@ describe('Trip', () => {
 
   it('Should have a duration', () => {
     expect(sampleTrip.duration).to.eql(8);
+  })
+
+  it('Should have a method that calculates the cost of one trip', () => {
+    const costForRomeTrip = sampleTrip.calculateCostForOneTrip(4, 17, 22, destinationData)
+    expect(costForRomeTrip).to.eql(9592)
   })
 
 

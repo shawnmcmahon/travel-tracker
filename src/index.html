@@ -3,7 +3,7 @@
   <head>
     <meta charset='UTF-8'>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" href="datepicker.min.css">
   </head>
   <body>
     <main>
@@ -25,10 +25,18 @@
       </section>
       <section class="book-trip-background" id="bookTripBackground">
         <p class="label" id="bookLabel">Book</p>
-          <input class="days-input">Departure Day</input>
-          <input class="days-input">Days</input>
-          <input class="travelers-input">Travelers</input>
-          <button class="search-button"> Search </button>
+          <form class="book-form">
+            <label for="destinatioList">Select a Destination</label>
+            <select name="destinationList" id="destinationDropDownMenu" class="request-input"></select>
+            <label for="departureDate">Depature Date</label>
+            <input type="data" id="depatureDate" class="request-date" name="departure-date" ara-required="true">
+            <label for="duration">Trip Duration (Days)</label>
+            <input type="number" id="duration" class="request-input" name="duration" max="30" min="1" aria-required="true">
+            <label for="travelers">Number of Travelers</label>
+            <input type="number" id="travelers" class="request-input" name="travelers" max="30" min="1" aria-required="true">
+            <button id="calculateTripCost" class="request-button" disabled>Calculate Cost</button>
+            <button id="bookTrip" class="request-button" disabled>Book Trip</button>
+          </form>
             <section class="search-results-background">
               <p class="label" id="searchResultsLabel">Available Destinations</p>
                 <article class="card" id="destinationCard">

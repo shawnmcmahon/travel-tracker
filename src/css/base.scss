@@ -77,6 +77,13 @@ $primary-background: #00239C;
     align-items: center;
   }
 
+  .book-form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-self: center;
+  }
+
   .search-results-background {
     background: inherit;
     width: 550px;

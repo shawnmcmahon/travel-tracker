@@ -1,20 +1,27 @@
+const checkForError = (response) => {
+  if (!response.ok) {
+    throw new Error('Something went wrong, please try again.');
+  } else {
+    return response.json();
+  }
+}
+
 const retrieveSingleTraveler = (id) => {
   return fetch('http://localhost:3001/api/v1/travelers/')
-    .then(response => response.json())
+    .then(response => checkForError(response))
     .catch(err => console.log(err))
 }
 
 const retrieveTrips = () => {
   return fetch('http://localhost:3001/api/v1/trips')
-    .then(response => response.json())
-    //Need to replace console.log with displayErrMessage
+    .then(response => checkForError(response))
     .catch(err => console.log(err))
 
 }
 
 const retrieveDestinations = () => {
   return fetch('http://localhost:3001/api/v1/destinations')
-  .then(response => response.json())
+  .then(response => checkForError(response))
   .catch(err => console.log(err))
 }
 
@@ -36,4 +43,4 @@ const retrieveAPIData = (id) => {
 
 
 
-export {retrieveSingleTraveler, retrieveTrips, retrieveDestinations, retrieveAPIData}
+export {checkForError, retrieveSingleTraveler, retrieveTrips, retrieveDestinations, retrieveAPIData}
